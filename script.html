@@ -1,0 +1,348 @@
+<script>
+    /*
+    let n = parseInt(prompt("enter no"))
+    if (n > 0 && n != null) {
+        for (let i = 1; i <= n; i++) {
+            let count = 0;
+            for (let j = 1; j <= i; j++) {
+                if (i % j === 0) {
+                    count++
+
+                }
+                if (count > 2) break;
+
+            }
+            if (count == 2) {
+                console.log(i)
+            }
+        }
+    }
+    else {
+        console.log("please enter number property ")
+    } 
+    */
+
+
+
+    /*
+    let str = " I love Javascript ";
+    str = str.trim()
+    if (str.length === 0) {
+        console.log(0)
+    }
+    else {
+        let words = str.split(" ").filter(word => word.length > 0);
+        console.log(words.length);
+    }  
+    */
+
+
+
+
+    /*
+    let arr = [10, 20, 30, 40]
+    let sum = 0
+    if (Array.isArray(arr) && arr.length > 0) {
+
+        for (let i of arr) {
+            sum = sum + i
+        }
+        console.log(sum / arr.length)
+    }
+    else {
+        console.log("arry is empty ")
+    } 
+    */
+
+
+
+    /*
+    let str = "12345"
+    let arr = [1, 2, 4, 5]
+    let str1 = arr.join("")
+    if (Array.isArray(arr) && typeof str === "string") {
+        for (let i of str) {
+
+            if (!str1.includes(i)) {
+                console.log(i)
+            }
+        }
+    } else {
+        console.log("invalid input")
+    }
+    */
+
+
+
+    /*
+    let arr = [1, 2, 4, 5, 7, 10];
+    let miss = []
+    let max = Math.max(...arr);
+    let min = Math.min(...arr);
+
+    if (Array.isArray(arr) && Array.isArray(arr) && arr.length > 1) {
+        for (let i = min; i <= max; i++) {
+            if (!arr.includes(i)) {
+                miss.push(i)
+            }
+        }
+
+        console.log(miss)
+    }
+    else {
+        console.log("invalid input")
+    }
+      */
+
+
+
+    /*
+    let arr = [1, 2, 2, 3, 3, 3, 4, 2]
+    let arr1 = []
+    for (let i = 0; i < arr.length; i++) {
+        if (!arr1.includes(arr[i])) {
+            arr1.push(arr[i])
+        }
+
+    }
+    let obj = {
+    };
+    for (let i of arr1) {
+        let count = 0;
+        for (let j of arr) {
+            if (i === j) {
+                count++
+            }
+        }
+        obj[i] = count;
+    }
+       */
+
+
+
+    /*
+    let a = -5, b = 10;
+    console.log(`before swap a = ${a} and b = ${b}`)
+    a = a + b;
+    b = a - b;
+    a = a - b;
+    console.log(`after swap a = ${a} and b = ${b}`)
+        */
+
+
+    /*
+    let str = prompt("enter text")
+    if (str == null || str.trim().length === 0) {
+        console.log("invalid input")
+    }
+    else {
+        str = str.trim()
+        let arr = str.split(" ").filter(word => word.length > 0)
+        let max = arr[0]
+        for (let i = 0; i < arr.length; i++) {
+            if (max.length < arr[i].length) {
+                max = arr[i]
+            }
+        }
+        console.log(max)
+    }
+     */
+
+
+    /*
+    let n = parseInt(prompt("enter no."))
+    let c = n
+    let s = 0;
+    if (isNaN(n) || n < 0) {
+        console.log("invalid input")
+    }
+    else {
+        count = n.toString().length;
+        while (n > 0) {
+            let r = Math.floor(n % 10);
+            s += Math.pow(r, count);
+            n = Math.floor(n / 10);
+
+        }
+        console.log(s === c)
+    }
+       
+       */
+
+
+    /*
+    let arr = [1, 2, 3, 4];
+    let arr1 = [3, 4, 5, 6];
+    let intr = [];
+    if (Array.isArray(arr) && Array.isArray(arr1) && arr.length > 0 && arr1.length > 0) {
+        //for(let i of arr){
+        //  for(let j of arr1){
+        //     if(i === j) {
+        //        intr.push(i)  
+        //       }
+        //   }
+        //  } 
+        intr = arr.filter(i => arr1.includes(i))
+        intr = [... new Set(intr)]
+        console.log(intr)
+    }
+    else {
+        console.log("invalid input");
+    }
+        
+        */
+
+    /*
+    let str = "listen"
+    let str1 = "silent"
+    let arr = []
+    let arr1 = []
+    if (typeof str === "string" && typeof str1 === "string" && str.trim().length > 0 && str1.trim().length > 0) {
+
+        //   for(let i of str){
+        //       arr.push(i)                  
+        //   arr.sort()
+        //    str = arr.join("")
+        //   for(let i of str1){
+        //       arr1.push(i)
+        //   }
+        //   arr1.sort()
+        //   str1 = arr1.join("")
+
+        str = str.toLowerCase().trim()
+        str1 = str1.toLowerCase().trim()
+
+        arr = str.split("").sort()
+        arr1 = str1.split("").sort()
+
+        str = arr.join("")
+        str1 = arr1.join("")
+
+        if (str === str1) {
+            console.log(true)
+        }
+        else {
+            console.log(false)
+        }
+    }
+      */
+
+
+
+
+    /*
+    let str = prompt("enter string");
+    let a = 0
+    let b = 0
+    let c = 0
+    let obj = {
+        a: 0,
+        b: 0,
+        c: 0
+    }
+    if (typeof str === "string" && str.trim().length > 0) {
+        let words = str.split(" ").filter(word => word.length > 0)
+        let str1 = words.join("")
+
+        for (let i of str1) {
+
+            if ("a".includes(i)) {
+                a++;
+            }
+            if ("b".includes(i)) {
+                b++;
+            }
+            if ("c".includes(i)) {
+                c++;
+            }
+            if (i === "a") {
+                obj[i] = a
+
+            }
+            if (i === "b") {
+                obj[i] = b
+
+            }
+            if (i === "c") {
+                obj[i] = c
+
+            }
+
+        }
+        console.log(obj)
+
+    }
+    else {
+        console.log("invalid inoput")
+    }
+    */
+
+
+
+    /*
+    let str = prompt("enter string");
+    let obj = { a: 0, b: 0, c: 0 }
+
+    if (typeof str === "string" && str.trim().length > 0) {
+        let str1 = str.split(" ").filter(word => word.length > 0).join("")
+        str1 = str1.toLowerCase()
+
+        for (let i of str1) {
+            if (obj.hasOwnProperty(i)) {
+                obj[i]++
+            }
+        }
+        console.log(obj)
+    } else {
+        console.log("invalid input")
+    }
+      
+       */
+
+
+    /*
+    let n = parseInt(prompt("enter no"))
+    let a = 0
+    let b = 1
+    let c
+    if (!isNaN(n) && n !== null && n > 0) {
+        for (let i = 1; i <= n; i++) {
+
+            console.log(a)
+            c = a + b
+            a = b
+            b = c
+        }
+    }
+    else {
+        console.log("invalid input")
+    }  */
+
+
+
+
+    /* let arr = [121, 345, 44, 12, 33]
+       let arr1 = []
+       if (Array.isArray(arr) && arr.length > 0) {
+           for (let n of arr) {
+               if (typeof n !== "number" || n < 0)
+                   continue;
+               let c = n
+               let s = 0
+               while (n > 0) {
+                   let r = Math.floor(n % 10)
+                   s = Math.floor(r + (s * 10))
+                   n = Math.floor(n / 10)
+               }
+               if (s === c) {
+                   arr1.push(s)
+               }
+           }
+           console.log(arr1)
+       }
+       else {
+           console.log("invalid input")
+       } */
+
+
+</script>
