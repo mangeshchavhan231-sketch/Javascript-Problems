@@ -5,33 +5,33 @@
     // Input: "hello"
     // Output: "olleh"
 
-        // Solution 1
-        /*
-        let str = prompt("enter string");
-        let reverseStr ="" ;
-  
-        if(str && str.trim().length. > 0){
-        for(let i = str.length - 1; i>=0 ; i--){
-          reverseStr = reverseStr + str[i];
-        }
-        console.log(reverseStr);
-        }else{
-            console.log("invalid input")
-        }
-        */
-        
-        // Solution 2
-        /*    
-        let str = prompt("enter string");
-        let reverseStr ="" ;
-  
-        if(typeof str == "string" && str.trim().length > 0){
-        console.log([...str].reverse().join(""));
-        }else{
-            console.log("invalid input");
-        }
-        */
-        
+    // Solution : 1
+    /*
+    let str = prompt("enter string");
+    let reverseStr ="" ;
+ 
+    if(str && str.trim().length. > 0){
+    for(let i = str.length - 1; i>=0 ; i--){
+      reverseStr = reverseStr + str[i];
+    }
+    console.log(reverseStr);
+    }else{
+        console.log("invalid input")
+    }
+    */
+
+    // Solution : 2
+    /*    
+    let str = prompt("enter string");
+    let reverseStr ="" ;
+ 
+    if(typeof str == "string" && str.trim().length > 0){
+    console.log([...str].reverse().join(""));
+    }else{
+        console.log("invalid input");
+    }
+    */
+
 
 
     // 2. Find Maximum Number in Array
@@ -39,85 +39,85 @@
     // Input: [10, 25, 5, 8, 32]
     // Output: 32
 
-        // Solution 1
-        /*
-        let arr = [100,25,5,8,32];
-        
-        if(Array.isArray(arr) && arr.length > 0){
-        if(arr.length == 1) {
-            console.log(arr[0]);
-         }else{
-            arr.sort((a,b) => a-b)
-            console.log(arr[arr.length - 1])
-            }
+    // Solution : 1
+    /*
+    let arr = [100,25,5,8,32];
+    
+    if(Array.isArray(arr) && arr.length > 0){
+    if(arr.length == 1) {
+        console.log(arr[0]);
+     }else{
+        arr.sort((a,b) => a-b)
+        console.log(arr[arr.length - 1])
         }
-        else{
-            console.log("invalid input")
-        }
-        */
-        
-        // Solution 2
-        /*  
-        let arr = [10,25,5,8,32];
-        
-        if(Array.isArray(arr) && arr.length > 0){
-            let isValid = true;
-           let max = -Infinity;
-           for(let num of arr){
-               if(typeof num !== "number" || Number.isNaN(num)){
-            console.log("invalid element in array");
-            isValid = false;
-           break;
-           }
-           
-           if(num > max) max = num;
-           }
-           if(isValid) console.log(max)
-        }
-        else{
-            console.log("invalid input")
-        }
-        */ 
-        
+    }
+    else{
+        console.log("invalid input")
+    }
+    */
+
+    // Solution : 2
+    /*  
+    let arr = [10,25,5,8,32];
+    
+    if(Array.isArray(arr) && arr.length > 0){
+        let isValid = true;
+       let max = -Infinity;
+       for(let num of arr){
+           if(typeof num !== "number" || Number.isNaN(num)){
+        console.log("invalid element in array");
+        isValid = false;
+       break;
+       }
        
+       if(num > max) max = num;
+       }
+       if(isValid) console.log(max)
+    }
+    else{
+        console.log("invalid input")
+    }
+    */
+
+
 
     // 3. Count Vowels
     // Problem: Count how many vowels (a, e, i, o, u) are in a string.
     // Input: "javascript"
     // Output: 3
 
-       // Solution 1 
-       /*
-       let str = prompt("enter string");
-       
-       if(typeof str === "string" && str.trim().length > 0)
-       {
-       let count = 0;
-       for(let ch of str.toLowerCase){
+    // Solution : 1 
+    /*
+    let str = prompt("enter string");
+    
+    if(typeof str === "string" && str.trim().length > 0)
+    {
+    let count = 0;
+    for(let ch of str.toLowerCase){
 
-           if("aeiou".includes(ch)) count ++;
-       }
-       console.log(count);
-       }
-       else{
-           console.log("invalid input");
-       }
-       */
+        if("aeiou".includes(ch)) count ++;
+    }
+    console.log(count);
+    }
+    else{
+        console.log("invalid input");
+    }
+    */
+
+    // Solution : 2
+    /*
+    let str = prompt("enter string");
+      
+    if(typeof str === "string" && str.trim(). length > 0){
+    
+       let matches = str.match(/[aeiou]/gi);
        
-       // Solution 2
-       /*
-       let str = prompt("enter string");
-         
-       if(typeof str === "string" && str.trim(). length > 0){
+   console.log(matches ? matches.length:0);
        
-          let matches = str.match(/[aeiou]/gi);
-          
-      console.log(matches ? matches.length:0);
-          
-       }else{
-           console.log("invalid input");
-       }
-       */
+    }else{
+        console.log("invalid input");
+    }
+    */
 
 
 
@@ -125,61 +125,61 @@
     // Problem: Check if a word reads the same backward and forward.
     // Input: "madam"
     // Output: true
-        
-       // Solution 1
-       /*
-       let str = prompt("enter string");
-       
-       if(typeof str === "string" && str.trim(). length > 0){
-       str = str.trim().toLowerCase()
-       console.log(str.split("").reverse().join("") === str ? true : false );
+
+    // Solution : 1
+    /*
+    let str = prompt("enter string");
+    
+    if(typeof str === "string" && str.trim(). length > 0){
+    str = str.trim().toLowerCase()
+    console.log(str.split("").reverse().join("") === str ? true : false );
+    }else{
+        console.log("invalid input");
+    }
+    */
+
+    // Solution : 2
+    /*
+    let str = prompt("enter string");
+    
+    if(typeof str === "string" && str.trim().length > 0){
+    str = str.trim().toLowerCase().replace(/[^a-z0-9]/g,"") 
+    if (!str) {
+       console.log("no valid characters");
        }else{
-           console.log("invalid input");
-       }
-       */
-       
-       // Solution 2
-       /*
-       let str = prompt("enter string");
-       
-       if(typeof str === "string" && str.trim().length > 0){
-       str = str.trim().toLowerCase().replace(/[^a-z0-9]/g,"") 
-       if (!str) {
-          console.log("no valid characters");
-          }else{
-        console.log(str === [...str].reverse().join(""));
-           }
-       }else{
-           console.log("invalid input");
-       }
-       */
-       
+     console.log(str === [...str].reverse().join(""));
+        }
+    }else{
+        console.log("invalid input");
+    }
+    */
+
 
 
     // 5. Sum of Digits
     // Problem: Find the sum of digits of a given number.
     // Input: 1234
     // Output: 10
-       
-       // Solution 1
-       /* 
-       let n= Number(prompt("enter no"));
-        
-       if(Number.isInteger(n) && n>=0){
-       let sum = 0
-       let temp = n
-       while(temp){
-           sum += temp%10;
-           temp=Math.floor(temp/10);
-       }
-       console.log(sum);
-       }
-       else{
-           console.log("invalid input");
-       }
-       */
-    
-    // Solution 2 
+
+    // Solution : 1
+    /* 
+    let n= Number(prompt("enter no"));
+     
+    if(Number.isInteger(n) && n>=0){
+    let sum = 0
+    let temp = n
+    while(temp){
+        sum += temp%10;
+        temp=Math.floor(temp/10);
+    }
+    console.log(sum);
+    }
+    else{
+        console.log("invalid input");
+    }
+    */
+
+    // Solution : 2 
     /*
     let n= prompt("enter no");
     
@@ -194,7 +194,7 @@
            console.log("invalid input");
        }
      */
-       
+
 
 
     // 6. FizzBuzz
@@ -204,77 +204,77 @@
     // If divisible by 5 → print “Buzz”
     // If both → print “FizzBuzz”
 
-       // Solution 1
-       /*
-       let num = 50;
-       
-       if(num){
-       for(let i = 1; i <= 50; i++){
-       
-           if(i%3 === 0 && i%5 === 0){
-               console.log("FizzBuzz")
-           }
-           else if(i%3 === 0){
-               console.log("Fizz");
-           }
-           else if(i%5 === 0){
-               console.log("Buzz");
-           }
-           else{
-               console.log(i);
-           }                              
-         }
-       }
-       else{
-           console.log("invalid input")
-       }
-       */
-       
-       // Solution 2
-       /*
-       let num = 50;
-       
-       if(Number.isInteger(num) && num>0){
-       for(let i = 1; i <= num; i++){
-       
-           if(i%15 === 0){
-               console.log("FizzBuzz")
-           }
-           else if(i%3 === 0){
-               console.log("Fizz");
-           }
-           else if(i%5 === 0){
-               console.log("Buzz");
-           }
-           else{
-               console.log(i);
-           }                              
-         }
-       }
-       else{
-           console.log("invalid input")
-       }
-       */
-       
-       // Solution 3 
-       /*
-       let num = 50;
-       
-       if(Number.isInteger(num) && num>0){
-       for (let i = 1; i <= num; i++) {
-        console.log(
-            i % 15 === 0 ? "FizzBuzz" :
-            i % 3 === 0  ? "Fizz" :
-            i % 5 === 0  ? "Buzz" :
-            i
-        );
-       }
-       }
-       else{
-           console.log("invalid input")
-       }
-       */
-       
+    // Solution : 1
+    /*
+    let num = 50;
+    
+    if(num){
+    for(let i = 1; i <= 50; i++){
+    
+        if(i%3 === 0 && i%5 === 0){
+            console.log("FizzBuzz")
+        }
+        else if(i%3 === 0){
+            console.log("Fizz");
+        }
+        else if(i%5 === 0){
+            console.log("Buzz");
+        }
+        else{
+            console.log(i);
+        }                              
+      }
+    }
+    else{
+        console.log("invalid input")
+    }
+    */
+
+    // Solution : 2
+    /*
+    let num = 50;
+    
+    if(Number.isInteger(num) && num>0){
+    for(let i = 1; i <= num; i++){
+    
+        if(i%15 === 0){
+            console.log("FizzBuzz")
+        }
+        else if(i%3 === 0){
+            console.log("Fizz");
+        }
+        else if(i%5 === 0){
+            console.log("Buzz");
+        }
+        else{
+            console.log(i);
+        }                              
+      }
+    }
+    else{
+        console.log("invalid input")
+    }
+    */
+
+    // Solution : 3 
+    /*
+    let num = 50;
+    
+    if(Number.isInteger(num) && num>0){
+    for (let i = 1; i <= num; i++) {
+     console.log(
+         i % 15 === 0 ? "FizzBuzz" :
+         i % 3 === 0  ? "Fizz" :
+         i % 5 === 0  ? "Buzz" :
+         i
+     );
+    }
+    }
+    else{
+        console.log("invalid input")
+    }
+    */
+
 
 
     // 7. Find Even & Odd Numbers
@@ -282,78 +282,78 @@
     // Input: [1, 2, 3, 4, 5, 6]
     // Output: Even → [2,4,6], Odd → [1,3,5] 
 
-       // Solution 1 
-       /*
-       let arr = [1,2,3,4,5,6];
-       
-       if(Array.isArray(arr) && arr.length > 0){
-       let even = [];
-       let odd = []
-       for(let i of arr){
-           if(i%2 === 0){
-               even.push(i)
-           }else{
-              odd.push(i)
-           }
-       }
-       console.log("Event :",even);
-       console.log("Odd :",odd);
-       }
-       else{
-           console.log("invalid input");
-       }
-       */
-       
-       // Solution 2 
-      /*
-       let arr = [1,2,3,4,5,",",6];
-       
-       if(!Array.isArray(arr) || arr.length === 0)                      {
-       console.log("invalid input");
-       
-       }
-       else{
-       
-       const even = [];
-       const odd = [];
-       
-       for(let num of arr){
-       
-      if(Number.isInteger(num)){
-      
-     (num%2 === 0? even : odd).push(num); 
-     
+    // Solution : 1 
+    /*
+    let arr = [1,2,3,4,5,6];
+    
+    if(Array.isArray(arr) && arr.length > 0){
+    let even = [];
+    let odd = []
+    for(let i of arr){
+        if(i%2 === 0){
+            even.push(i)
+        }else{
+           odd.push(i)
         }
-         else {
-            console.log(num, "is an invalid element in the array");
-        }     
-               
-       }
-       console.log("Even :",even);
-       console.log("Odd :",odd);
-       
-       } 
-       */
-       
-       // Solution 3 
-       /*
-       let arr = [1,2,3,4,5,6];
-       
-       let result = arr.reduce(
-       (acc, num) => {
-        if (typeof num !== "number" || !Number.isInteger(num)) {
-            throw "invalid element in array";
-        }
-        acc[num % 2 === 0 ? "even" : "odd"].push(num);
-        return acc;
-        },
-        { even: [], odd: [] }
-        );
+    }
+    console.log("Event :",even);
+    console.log("Odd :",odd);
+    }
+    else{
+        console.log("invalid input");
+    }
+    */
 
-        console.log("Even:", result.even);
-        console.log("Odd:", result.odd);
-        */
-       
+    // Solution : 2 
+    /*
+     let arr = [1,2,3,4,5,",",6];
+     
+     if(!Array.isArray(arr) || arr.length === 0)                      {
+     console.log("invalid input");
+     
+     }
+     else{
+     
+     const even = [];
+     const odd = [];
+     
+     for(let num of arr){
+     
+    if(Number.isInteger(num)){
+    
+   (num%2 === 0? even : odd).push(num); 
+   
+      }
+       else {
+          console.log(num, "is an invalid element in the array");
+      }     
+             
+     }
+     console.log("Even :",even);
+     console.log("Odd :",odd);
+     
+     } 
+     */
+
+    // Solution : 3 
+    /*
+    let arr = [1,2,3,4,5,6];
+    
+    let result = arr.reduce(
+    (acc, num) => {
+     if (typeof num !== "number" || !Number.isInteger(num)) {
+         throw "invalid element in array";
+     }
+     acc[num % 2 === 0 ? "even" : "odd"].push(num);
+     return acc;
+     },
+     { even: [], odd: [] }
+     );
+
+     console.log("Even:", result.even);
+     console.log("Odd:", result.odd);
+     */
+
 
 
     // 8. Factorial of a Number
@@ -361,73 +361,73 @@
     // Input: 5
     // Output: 120
 
-       // Solution 1 
-       /*
-       let num = Number(prompt("enter no."));
-       
-        if(!isNaN(num) && Number.isInteger(num) && num>0){
-        let fact = 1
-        for(let i=1; i<=num; i++){
-           fact = fact * i;
-        }
-        console.log(fact);
-        }
-       else{
-          console.log("invalid input ");
-        } 
-        */
-      
-      // Solution 2 
-      /*
-      let num = Number(prompt("Enter a non-negative integer:"));
-       
-       if(!num || !Number.isInteger(num) || num<0){
+    // Solution : 1 
+    /*
+    let num = Number(prompt("enter no."));
+    
+     if(!isNaN(num) && Number.isInteger(num) && num>0){
+     let fact = 1
+     for(let i=1; i<=num; i++){
+        fact = fact * i;
+     }
+     console.log(fact);
+     }
+    else{
        console.log("invalid input ");
-       }
-       else{
-       let fact = 1n;
-       const bingInt = BigInt(num);
-       for(let i=1n; i<=bigInt; i++){
-           fact = fact * i;
-       }
-      console.log(fact.toString());
-      }
-      */
-          
-      
+     } 
+     */
+
+    // Solution : 2 
+    /*
+    let num = Number(prompt("Enter a non-negative integer:"));
+     
+     if(!num || !Number.isInteger(num) || num<0){
+     console.log("invalid input ");
+     }
+     else{
+     let fact = 1n;
+     const bingInt = BigInt(num);
+     for(let i=1n; i<=bigInt; i++){
+         fact = fact * i;
+     }
+    console.log(fact.toString());
+    }
+    */
+
+
 
     // 9. Remove Duplicates from Array
     // Problem: Remove duplicate values.
     // Input: [1,2,2,3,4,4,5,5]
     // Output: [1,2,3,4,5]
 
-      // Solution 1 
-      /*
-      let arr = [1,2,2,3,4,4,5,5];
+    // Solution : 1 
+    /*
+    let arr = [1,2,2,3,4,4,5,5];
 
-      if(Array.isArray(arr) && arr.length > 0){
-      let uniqueArray = [];
-      for(let num of arr){
-          if(!uniqueArray.includes(num) && Number.isInteger(num)){
-              uniqueArray.push(num)
-          }
-      }
-      console.log(uniqueArray);
-      }else{
-          console.log("invalid input");
-      }
-      */    
+    if(Array.isArray(arr) && arr.length > 0){
+    let uniqueArray = [];
+    for(let num of arr){
+        if(!uniqueArray.includes(num) && Number.isInteger(num)){
+            uniqueArray.push(num)
+        }
+    }
+    console.log(uniqueArray);
+    }else{
+        console.log("invalid input");
+    }
+    */
 
-      // Solution 2 
-      /*
-      let arr = [1,2,2,3,4,4,5,5];
-      if(Array.isArray(arr) && arr.length>0){
-      let uniqueArray = [...new Set(arr.filter(Number.isInteger))];
-      console.log(uniqueArray);
-      }else{
-          console.log("Invalid Input");
-      }
-      */
+    // Solution : 2 
+    /*
+    let arr = [1,2,2,3,4,4,5,5];
+    if(Array.isArray(arr) && arr.length>0){
+    let uniqueArray = [...new Set(arr.filter(Number.isInteger))];
+    console.log(uniqueArray);
+    }else{
+        console.log("Invalid Input");
+    }
+    */
 
 
     // 10. Find Second Largest Number
@@ -435,71 +435,71 @@
     // Input: [10, 25, 5, 8, 32]
     // Output: 25
 
-      // Solution 1
-      /*
-      let arr = [10, 20, 5, 80, 32];
+    // Solution : 1
+    /*
+    let arr = [10, 20, 5, 80, 32];
 
-      if(Array.isArray(arr) && arr.length >= 2){
+    if(Array.isArray(arr) && arr.length >= 2){
 
-         let largest = -Infinity;
-         let secondLargest = -Infinity;
+       let largest = -Infinity;
+       let secondLargest = -Infinity;
 
-       for(let num of arr)
-       {
+     for(let num of arr)
+     {
  
-         if(Number.isInteger(num)){
-   
-        if(num > largest){
-  
-            secondLargest = largest;
-            largest = num;
-      
-        }
-  
-        else if(num > secondLargest && num < largest){
-  
-                secondLargest = num;
-      
-        }
-        }else{
-  
-            console.log(num,"is not a valid integer")
-         }
-        }
-
-        if (secondLargest === -Infinity) {
-           console.log("Second largest does not exist");
-        } else {
-          console.log("Second Largest:", secondLargest);
-        }
-
-        }
-        else{
-           console.log("Invalid Input");
-        }
-        */
-
-        // Solution 2
-        /*
-        let arr = [10, 20, 5, 80, 32];
-
-        if(Array.isArray(arr) && arr.length >= 2){
-        let secondLargest= [...arr].sort((a,b) => b-a)[1]
-        console.log(secondLargest);
-        }
-        else{
-            console.log("Invalid Input");
-        }
-        */
-
+       if(Number.isInteger(num)){
  
-        
+      if(num > largest){
+ 
+          secondLargest = largest;
+          largest = num;
+    
+      }
+ 
+      else if(num > secondLargest && num < largest){
+ 
+              secondLargest = num;
+    
+      }
+      }else{
+ 
+          console.log(num,"is not a valid integer")
+       }
+      }
+
+      if (secondLargest === -Infinity) {
+         console.log("Second largest does not exist");
+      } else {
+        console.log("Second Largest:", secondLargest);
+      }
+
+      }
+      else{
+         console.log("Invalid Input");
+      }
+      */
+
+    // Solution : 2
+    /*
+    let arr = [10, 20, 5, 80, 32];
+
+    if(Array.isArray(arr) && arr.length >= 2){
+    let secondLargest= [...arr].sort((a,b) => b-a)[1]
+    console.log(secondLargest);
+    }
+    else{
+        console.log("Invalid Input");
+    }
+    */
+
+
+
     // 11. Find the Smallest Number in an Array
     // Problem: Find and print the smallest number in a given array.
     // Input: [4, 1, 9, 7, 2]
     // Output: 1
 
-    // Solution 1
+    // Solution : 1
     /*
     let arr = [4, 1, 9, 7, 2];
 
@@ -511,7 +511,7 @@
     }
     */
 
-    // Solution 2
+    // Solution : 2
     /*
     let arr = [4, 1, 9, 7, 2];
 
@@ -542,7 +542,7 @@
     // Input: 7
     // Output: true
 
-    // Solution 1 
+    // Solution : 1 
     /*
     let num = Number(prompt ("Enter no"));
 
@@ -563,7 +563,7 @@
     }
     */
 
-    // Solution 2
+    // Solution : 2
     /*
     let num = Number(prompt ("Enter no"));
 
@@ -586,12 +586,13 @@
     */
 
 
-    
-//  13. Find All Prime Numbers in a Range
- // Problem: Print all prime numbers between 1 and n.
-//  Input: 10
-//  Output: 2, 3, 5, 7
 
+    //  13. Find All Prime Numbers in a Range
+    // Problem: Print all prime numbers between 1 and n.
+    //  Input: 10
+    //  Output: 2, 3, 5, 7
+    
+    //  Solution : 1
     /*
     let n = parseInt(prompt("enter no"))
     if (n > 0 && n != null) {
@@ -622,6 +623,7 @@
     // Input: "I love JavaScript"
     // Output: 3
 
+    //  Solution : 1
     /*
     let str = " I love Javascript ";
     str = str.trim()
@@ -635,12 +637,13 @@
     */
 
 
-    
+
     // 15. Find the Average of an Array
     // Problem: Calculate the average (mean) of all elements in an array.
     // Input: [10, 20, 30, 40]
     // Output: 25
 
+    //  Solution : 1
     /*
     let arr = [10, 20, 30, 40]
     let sum = 0
@@ -663,7 +666,7 @@
     // Input: [1, 2, 4, 5]
     // Output: 3
 
-    // Solution 1
+    // Solution : 1
     /*
     let str = "12345"
     let arr = [1, 2, 4, 5]
@@ -680,7 +683,7 @@
     }
     */
 
-    // Solution 2 
+    // Solution : 2 
     /*
     let arr = [1, 2, 4, 5, 7, 10];
     let miss = []
@@ -698,7 +701,7 @@
     else {
         console.log("invalid input");
     }
-    */  
+    */
 
 
 
@@ -707,6 +710,7 @@
     // Input: [1, 2, 2, 3, 3, 3]
     // Output: {1:1, 2:2, 3:3}
 
+    //  Solution : 2
     /*
     let arr = [1, 2, 2, 3, 3, 3, 4, 2]
     let arr1 = []
@@ -736,6 +740,7 @@
     // Input: a = 5, b = 10
     // Output: a = 10, b = 5
 
+    //  Solution : 1
     /*
     let a = -5, b = 10;
     console.log(`before swap a = ${a} and b = ${b}`)
@@ -751,7 +756,8 @@
     // Problem: Find and print the longest word.
     // Input: "JavaScript is powerful"
     // Output: "JavaScript"
-    
+
+    //  Solution : 1
     /*
     let str = prompt("enter text")
     if (str == null || str.trim().length === 0) {
@@ -778,6 +784,7 @@
     // Output: true
     // > Because 1³ + 5³ + 3³ = 153    
 
+    //  Solution : 1
     /*
     let n = parseInt(prompt("enter no."))
     let c = n
@@ -804,6 +811,7 @@
     // Input: [1, 2, 3, 4], [3, 4, 5, 6]
     // Output: [3, 4]
 
+    //  Solution : 1
     /*
     let arr = [1, 2, 3, 4];
     let arr1 = [3, 4, 5, 6];
@@ -832,6 +840,7 @@
     // Input: "listen", "silent"
     // Output: true
 
+    //  Solution : 1
     /*
     let str = "listen"
     let str1 = "silent"
@@ -874,7 +883,7 @@
     // Input: "banana"
     // Output: { b:1, a:3, n:2 }
 
-    // Soluton 1
+    // Soluton : 1
     /*
     let str = prompt("enter string");
     let a = 0
@@ -921,8 +930,8 @@
         console.log("invalid inoput")
     }
     */
-    
-    // Solution 2
+
+    // Solution : 2
     /*
     let str = prompt("enter string");
     let obj = { a: 0, b: 0, c: 0 }
@@ -948,6 +957,8 @@
     // Problem: Print first n Fibonacci numbers.
     // Input: 5
     // Output: 0, 1, 1, 2, 3
+
+    //  Solution : 1
     /*
     let n = parseInt(prompt("enter no"))
     let a = 0
@@ -973,6 +984,7 @@
     // Input: [121, 345, 44, 12, 33]
     // Output: [121, 44, 33]
 
+    //  Solution : 1
     /* 
     let arr = [121, 345, 44, 12, 33]
        let arr1 = []
@@ -1007,7 +1019,8 @@
     // Problem: Reverse the order of words in a sentence.
     // Input: "I love JavaScript"
     // Output: "JavaScript love I"
-
+    
+    //  Solution : 1
     /*
     let str = prompt("enter sentence")
     if (typeof str === "string" && str.trim().length > 0) {
@@ -1026,7 +1039,7 @@
     // Input: [1, 2, 3, 4, 5, 6]
     // Output: 12
 
-    // Solution 1
+    // Solution : 1
     /*
     let arr = [1, 2, 3, 3, 4, 6]
     let sum = 0
@@ -1045,7 +1058,7 @@
     }
     */
 
-    // Solution 2
+    // Solution : 2
     /*
     let arr = [1, 2, 3, 3, 4, 6]
     let sum = 0
@@ -1061,8 +1074,8 @@
     // Problem: A number is perfect if the sum of its divisors (excluding itself) equals the number.
     // Input: 6 → (1 + 2 + 3 = 6)
     // Output: true
-    
-    // Solution 1
+
+    // Solution : 1
     /*
     let num = parseInt(prompt("enter no"))
     let sum = 0
@@ -1084,7 +1097,7 @@
     }
     */
 
-    // Solution 2
+    // Solution : 2
     /*
     let num = Number(prompt("enter no"))
     let sum = 1
@@ -1109,6 +1122,7 @@
     // Input: 2, 5
     // Output: 32
 
+    //  Solution : 1
     /*
     let n = 2
     let sum = 1
@@ -1133,6 +1147,7 @@
     // Input: 12
     // Output: 1, 2, 3, 4, 6, 12
 
+    //  Solution : 1
     /*
     let n = parseInt(prompt("enter no"))
     if (typeof n === "number" && n > 0) {
@@ -1154,6 +1169,7 @@
     // Input: "Hello World"
     // Output: "HelloWorld"
 
+    //  Solution : 1
     /*
     let str = prompt("enter string")
     str = str.trim()
@@ -1167,12 +1183,13 @@
     */
 
 
-    
+
     // 32. Convert String to Title Case
     // Problem: Make the first letter of every word uppercase.
     // Input: "hello world"
     // Output: "Hello World"
 
+    //  Solution : 1
     /*
     let str = prompt("enter string ")
     if (str && str.trim().length > 0) {
@@ -1191,6 +1208,7 @@
     // Input: [10, 20, 30]
     // Output: 60
 
+    //  Solution : 1
     /*
     let arr = [10, 20, 30]
     let sum = 0
@@ -1215,7 +1233,7 @@
     // Input: [3, 1], [2, 5]
     // Output: [1, 2, 3, 5]
 
-    // Solution 1
+    // Solution : 1
     /*
     let arr = [3, 1]
     let arr1 = [2, 5]
@@ -1228,7 +1246,7 @@
     }
     */
 
-    // Solution 2
+    // Solution : 2
     /*
     let arr = [3, 1];
     let arr1 = [2, 5];
@@ -1254,8 +1272,8 @@
     // Problem: Display all characters that appear in both strings.
     // Input: "hello", "world"
     // Output: ["l", "o"]
-    
-    // Solution 1
+
+    // Solution : 1
     /*
     let str = prompt("enter string 1")
     let str1 = prompt("enter string 2")
@@ -1277,7 +1295,7 @@
     }
     */
 
-    // Solution 2
+    // Solution : 2
     /*
     let str = prompt("enter string 1")
     let str1 = prompt("enter string 2")
@@ -1302,6 +1320,7 @@
     // Input: "apple"
     // Output: "*ppl*
 
+    //  Solution : 1
     /*
     let str = prompt("enter string")
     if (str && str.trim().length > 0) {
@@ -1322,6 +1341,7 @@
     // Input: 12345
     // Output: 5
 
+    //  Solution : 1
     /*
     let num = Number(prompt("enter no"))
     if (!isNaN(num) && Number.isInteger(num)) {
@@ -1338,8 +1358,8 @@
     // Problem: Add all prime numbers from 1 to n.
     // Input: 10
     // Output: 17 → (2 + 3 + 5 + 7)
-    
-    // Solution 1
+
+    // Solution : 1
     /*
     let n = Number(prompt("enter string"))
     let sum = 0
@@ -1366,8 +1386,8 @@
     }
     console.log("sum = ", sum)
     */
-    
-    // Solution 2
+
+    // Solution : 2
     /*
     let n = Number(prompt("enter number"))
     let sum = 0
@@ -1405,8 +1425,8 @@
     // Problem: Reverse the digits of a number.
     // Input: 1234
     // Output: 4321
-    
-    // Solution 1
+
+    // Solution : 1
     /*
     let n = Number(prompt("enter  number"))
     let result = 0
@@ -1423,8 +1443,8 @@
         console.log("invalid input")
     }
     */
-    
-    // Solution 2
+
+    // Solution : 2
     /*
     let n = Number(prompt("enter  number"))
     if (!isNaN(n) && Number.isInteger(n)) {
@@ -1455,8 +1475,8 @@
     // Problem: Calculate the median value from a numeric array.
     // Input: [1, 2, 3, 4, 5]
     // Output: 3
-    
-    // Solution 1
+
+    // Solution : 1
     /*
     let arr = [1, 2, 3, 4, 5]
     if (Array.isArray(arr) && arr.length > 2) {
@@ -1468,8 +1488,8 @@
         console.log("invalid input")
     }
     */
-    
-    // Solution 2
+
+    // Solution : 2
     /*
     let arr = [1, 2, 3, 4, 5, 6]
     if (Array.isArray(arr) && arr.length > 2) {
@@ -1488,8 +1508,8 @@
     // Problem: Count how many elements are common.
     // Input: [1,2,3], [2,3,4]
     // Output: 2
-    
-    // Solution 1
+
+    // Solution : 1
     /*
     const arr = new Set([1, 2, 3, 4])
     let arr1 = new Set([3, 4, 5])
@@ -1508,7 +1528,7 @@
     }
     */
 
-    // Solution 2
+    // Solution : 2
     /*
     const arr = new Set([1, 2, 3, 4])
     let arr1 = new Set([3, 4, 5])
@@ -1532,7 +1552,7 @@
     // Input: "he!!o123"
     // Output: "heo"
 
-    // Solution 1
+    // Solution : 1
     /*
     let str = prompt("enter string ")
     let str1 = ""
@@ -1549,8 +1569,8 @@
         console.log("invalid input")
     }
     */
-    
-    // Solution 2
+
+    // Solution : 2
     /*
     let str = prompt("enter string ")
     if (str && str.trim().length > 0) {
@@ -1571,8 +1591,8 @@
     // Problem: Find GCD of two numbers using loop.
     // Input: 12, 18
     // Output: 6
-    
-    // Solution 1
+
+    // Solution : 1
     /*
     let n = parseInt(prompt("enter no"))
     let m = parseInt(prompt("enter no"))
@@ -1601,7 +1621,7 @@
     }
     */
 
-    // Solution 2
+    // Solution : 2
     /*
     let n = Number(prompt("enter no "))
     let m = Number(prompt("enter no "))
@@ -1624,7 +1644,7 @@
     // Input: 4, 6
     // Output: 12
 
-    // Solution 1
+    // Solution : 1
     /*
     let num = Number(prompt("enter no"))
     let num1 = Number(prompt("enter no"))
@@ -1657,7 +1677,7 @@
     }
     */
 
-    // Solution 2
+    // Solution : 2
     /*
     let num = Number(prompt("enter no"))
     let num1 = Number(prompt("enter no"))
@@ -1690,7 +1710,7 @@
     // Input: 145 → (1! + 4! + 5! = 145)
     // Output: true
 
-    // Solution 1
+    // Solution : 1
     /*
     let n = Number(prompt("enter no"))
     if (Number.isInteger(n) && n > 0) {
@@ -1716,7 +1736,7 @@
     }
     */
 
-    // Solution 2
+    // Solution : 2
     /*
     let n = Number(prompt("enter no"))
 
@@ -1746,7 +1766,7 @@
     // Input: 18 (1+8=9, 18%9==0)
     // Output: true
 
-    // Solution 1 
+    // Solution : 1 
     /*
     let n = Number(prompt("enter no"))
     if (Number.isInteger(n) && n > 0) {
@@ -1765,7 +1785,7 @@
     }
     */
 
-    // Solution 2
+    // Solution : 2
     /*
     let n = Number(prompt("enter numbers").trim());
 
@@ -1794,7 +1814,7 @@
     // Input: "javascript"
     // Output: 7
 
-    // Solution 1
+    // Solution : 1
     /*
     let str = prompt("enter input");
 
@@ -1822,7 +1842,7 @@
     // Input: "success"
     // Output: "s"
 
-    // Solution 1
+    // Solution : 1
     /*
     let str = prompt("enter string");
     let obj = {
@@ -1862,7 +1882,7 @@
     } 
     */
 
-    // Solution 2
+    // Solution : 2
     /*
     let str = prompt("enter input");
 
@@ -1901,7 +1921,7 @@
     // Input: [1,2,3], [1,2,3]
     // Output: true
 
-    // Solution 1
+    // Solution : 1
     /*
     let arr = [1, 2, 3];
     let arr1 = [1, 2, 3];
@@ -1924,7 +1944,7 @@
     }
     */
 
-    // Solution 2
+    // Solution : 2
     /*
     let arr = [1, 2, 3];
     let arr1 = [1, 2, 3];
@@ -1967,7 +1987,7 @@
     console.log(areArrayEqual(arr, arr1));
     */
 
-    //  Solution 3
+    //  Solution : 3
     /*
     let arr = [1, 2, 3];
     let arr1 = [1, 2, 3];
@@ -1977,12 +1997,14 @@
 
 
 
+    // ************ New 25 Problem *************
+    
     // 50. Find Sum of All Odd Numbers up to n
     // Problem: Add all odd numbers between 1 and n.
     // Input: 10
     // Output: 25
 
-    // Solution 1
+    // Solution : 1
     /*
     let num = Number(prompt("enter no"));
 
@@ -1998,7 +2020,7 @@
     }
     */
 
-    // Solution 2
+    // Solution : 2
     /*
     let num = Number(prompt("enter no"));
 
@@ -2010,4 +2032,1113 @@
         console.log("invalid input ")
     }
     */
+
+
+
+    // 51. Two Sum
+    // Find two numbers that add up to a target.
+    // Input: [2,7,11,15], target = 9
+    // Output: [2,7]
+
+    // Solution : 1
+    /*
+    let arr = [2, 7, 11, 15];
+    let target = 13;
+    let arr2 = [];
+
+    if (Array.isArray(arr) && arr.length >= 2 && Array.isArray(arr2)) {
+        for (let i of arr) {
+            for (let j of arr) {
+                if (i == j) continue;
+                if (i + j == target) {
+                    arr2.push(i);
+                }
+            }
+        }
+        console.log(arr2);
+    } else {
+        console.log("invalid input");
+    }
+    */
+
+    // Solution : 2
+    /*
+    let arr = [2,7,11,15];
+    let target = 9;
+    
+    if(!Array.isArray(arr) || arr.length < 2){
+    
+        console.log("invalid input");
+    } else {
+        let seen = new Set()
+        for(let num of arr){
+         let complement = target - num;
+            if(seen.has(complement)){
+              console.log([complement,num]);
+              return;
+            } else{
+                seen.add(num);
+            }
+        }
+        console.log("no pair found");
+    }
+    */
+
+
+
+    // 52. Move All Zeros to End
+    // Move all Os to the end while keeping order.
+    // Input:[0,1,0,3,12]
+    // Output: [1,3,12,0,0]
+
+    //  Solution : 1
+    /*
+    const arr = [0, 1, 0, 3, 12];
+
+    if (!Array.isArray(arr)) {
+        console.log("invalid input");
+    } else {
+
+        let nonZero = [];
+        let zero = [];
+
+        for (let num of arr) {
+            if (num == 0) {
+                zero.push(num);
+            } else {
+                nonZero.push(num);
+            }
+
+        }
+
+        console.log([...nonZero, ...zero]);
+    }
+    */
+
+    //  Solution : 2
+    /*
+    let arr = [0, 1, 0, 3, 12];
+
+    if (!Array.isArray(arr)) {
+        console.log("invalid input");
+    } else {
+        let insertPos = 0;
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i] !== 0) {
+                arr[insertPos] = arr[i];
+                insertPos++;
+            }
+        }
+
+
+        while (insertPos < arr.length) {
+            arr[insertPos] = 0;
+            insertPos++;
+        }
+        console.log(arr)
+    }
+     */
+
+
+
+
+    // 53. Find First Non-Repeating Character
+    // Return the first character that appears only once.
+    // Input:"swiss"
+    // Output:"w"
+
+    //  Solution : 1
+    /*
+    let str = prompt("enter string");
+
+    if (typeof str !== "string" || str.trim().length === 0) {
+        console.log("invalid input");
+    } else {
+
+        let freq = {};
+
+        for (let ch of str) {
+            freq[ch] = (freq[ch] || 0) + 1;
+        }
+
+        for (let ch of str) {
+            if (freq[ch] === 1) {
+                console.log(ch);
+                return;
+            }
+        }
+
+        console.log("No non-repeating character");
+    }
+    */
+
+    //  Solution : 2
+    /*
+    let str = prompt("enter string");
+
+    if (typeof str !== "string" || str.trim().length === 0) {
+        console.log("invalid input");
+    } else {
+        const map = new Map();
+        str = str.trim().toLowerCase();
+        let isFound = false;
+        for (let ch of str) {
+            if (ch === " ") continue;
+            map.set(ch, (map.get(ch) || 0) + 1);
+        }
+        for (let ch of str) {
+            if (map.get(ch) === 1) {
+                if (ch === " ") continue;
+                console.log(ch);
+                isFound = true;
+                break;
+            }
+        }
+        if (!isFound) {
+            console.log("No non-repeating character");
+        }
+    } 
+    */
+
+
+
+
+    // 54. Rotate Array Right by k
+    // Rotate elements to the right.
+    // Input:[1,2,3,4,5], k = 2
+    // Output:[4,5,1,2,3] 
+
+    //  Solution : 1
+    /*
+    let arr = [1, 2, 3, 4, 5];
+    let k = 2;
+
+    if (!Array.isArray(arr) || arr.length == 0 || typeof k !== "number") {
+        console.log("invalid input");
+    } else {
+        let len = arr.length;
+        k = k % len;
+        let result = [...arr.slice(len - k), ...arr.slice(0, len - k)];
+        console.log(result);
+    }
+    */
+
+
+
+
+    // 55. Check if Array is Sorted
+    // Check whether the array is sorted ascending.
+    // Input:[1,2,3,4]
+    // Output:true
+
+    //  Solution : 1
+    /*
+    let arr = [1, 2, 3, 4];
+
+    if (!Array.isArray(arr) || arr.length === 0) {
+        console.log("invalid input");
+    } else {
+        let unsortedArr = [...arr];
+        let sortedArr = arr.sort((a, b) => a - b);
+
+        let count = 0;
+        let isSort = false;
+
+        for (let num of unsortedArr) {
+            if (num === sortedArr[count]) {
+                isSort = true;
+            } else {
+                isSort = false;
+                break;
+            }
+            count++;
+
+        }
+        console.log(isSort);
+    }
+    */
+
+    //  Solution : 2
+    /*
+    let arr = [1, 2, 3, 4];
+    if (!Array.isArray(arr) || arr.length === 0) {
+        console.log("invalid input");
+    } else {
+        let isSort = true;
+        for (let i = 0; i < arr.length - 1; i++) {
+            if (arr[i] > arr[i + 1]) {
+                isSort = false;
+                break;
+            }
+        }
+        console.log(isSort);
+    }
+    */
+
+
+
+
+    // 56. Longest Word Length
+    // Return length of the longest word.
+    // Input:"JavaScript is amazing"
+    // Output:10
+
+    //  Solution : 1
+    /*
+    let str = prompt("enter string");
+
+    if (typeof str !== "string" || str.trim().length == 0) {
+        console.log("invalid input");
+    }
+    else {
+        let words = str.trim().split(/\s+/);
+        let max = 0;
+
+        for (let word of words) {
+            if (word.length > max) {
+                max = word.length;
+            }
+        }
+        console.log(max);
+    }
+    */
+
+
+
+
+    // 57. Find Duplicate Numbers
+    // Return duplicates from an array.
+    // Input:[1,2,3,2,4,5,3]
+    // Output: [2,3]
+
+    //  Solution : 1
+    /*
+    let arr = [1, 2, 3, 2, 4, 5, 3];
+    if (!Array.isArray(arr) || arr.length === 0) {
+        console.log("invalid array");
+    } else {
+        let arr1 = [];
+        let uniqueArr = [];
+
+        for (let num of arr) {
+            if (!arr1.includes(num)) {
+                arr1.push(num);
+            } else if (!uniqueArr.includes(num)) {
+                uniqueArr.push(num);
+            }
+        }
+        console.log(uniqueArr)
+    }
+    */
+
+    //  Solution : 2
+    /*
+    let arr = [1, 2, 3, 2, 4, 5, 3];
+    if (!Array.isArray(arr) || arr.length === 0) {
+        console.log("invalid array");
+    } else {
+        let seen = new Set();
+        let duplicates = new Set();
+        for (let num of arr) {
+            if (typeof num !== "number" || Number.isNaN(num)) continue;
+            if (seen.has(num)) {
+                duplicates.add(num);
+            } else {
+                seen.add(num);
+            }
+        }
+        console.log([...duplicates]);
+
+    }
+    */
+
+
+
+
+    // 58. Flatten Nested Array (1 level)
+    // Flatten array.
+    // Input:[1,[2,3],[4,5]]
+    // Output: [1,2,3,4,5]
+
+    //  Solution : 1
+    /*
+    let arr = [1, [2, 3], [4, 5]];
+
+    if (!Array.isArray(arr) || arr.length === 0) {
+        console.log("invalid input");
+    } else {
+        let flatArr = [];
+        for (let num of arr) {
+            if (num === null) continue;
+            if (Array.isArray(num)) {
+                flatArr.push(...num);
+            } else {
+                flatArr.push(num);
+            }
+        }
+        console.log(flatArr);
+    }
+    */
+
+
+
+
+    // 59. Check Balanced Parentheses
+    // Verify if brackets are balanced.
+    // Input:"({[]})"
+    // Output:true
+
+    //  Solution : 1
+    /*
+    let str = "({[]})".trim();
+    let isValid = false;
+    let count = str.length - 1
+    for (let i = 0; i < str.length / 2; i++) {
+
+        if ((str[i] == "(") && (str[count] == ")") || (str[i] == "{") && (str[count] == "}") || (str[i] == "[") && (str[count] == "]")) {
+            isValid = true;
+        }
+        else {
+            isValid = false;
+            break;
+        }
+        count--;
+    }
+    console.log(isValid); 
+    */
+
+    //  Solution : 2
+    /*
+    let str = "({[]})".trim();
+    if (typeof str !== "string" || str.length === 0) {
+        console.log("invalid input");
+    } else {
+        let stack = [];
+        let isValid = true;
+        let map = {
+            ")": "(",
+            "}": "{",
+            "]": "["
+        };
+        for (let ch of str) {
+            if (ch === "(" || ch === "{" || ch === "[") {
+                stack.push(ch);
+            } else if (ch === ")" || ch === "}" || ch === "]") {
+                if (stack.pop() !== map[ch]) {
+                    isValid = false;
+                    break;
+
+                }
+            }
+        }
+
+        if (stack.length !== 0) isValid = false;
+        console.log(isValid);
+    }
+    */
+
+
+
+
+    // 60. Find Largest Difference
+    // Find max difference between two numbers.
+    // Input:[2,3,10,6,4,8,1]
+    // Output: 8
+
+    //  Solution : 1
+    /*
+    let arr = [2, 3, 10, 6, 4, 8, 1];
+    if (!Array.isArray(arr) || arr.length == 0) {
+        console.log("invalid input");
+    } else {
+
+        let maxDifference = 0;
+        for (let i = 0; i < arr.length; i++) {
+            for (let j = i; j < arr.length; j++) {
+                if (arr[j] - arr[i] > maxDifference) {
+                    maxDifference = arr[j] - arr[i];
+
+                }
+            }
+        }
+        console.log(maxDifference);
+    }
+    */
+
+    //  Solution : 2
+    /*
+    let arr = [2, 3, 10, 6, 4, 8, 1];
+    if (!Array.isArray(arr) || arr.length < 2) {
+        console.log("invalid input");
+    } else {
+        let min = arr[0];
+        let maxDifference = -Infinity;
+
+        for (let i = 1; i < arr.length; i++) {
+            if (typeof arr[i] !== "number") continue;
+            let diff = arr[i] - min;
+            if (diff > maxDifference) {
+                maxDifference = diff;
+            }
+            if (min > arr[i]) {
+                min = arr[i];
+            }
+        }
+        console.log(Math.max(0, maxDifference));
+    }
+    */
+
+
+
+
+    // 61. Count Unique Elements
+    // Return number of unique values.
+    // Input:[1,2,2,3,4,4,5]
+    // Output: 5
+
+    //  Solution : 1
+    /*
+    let arr = [1, 2, 2, 3, 4, 4, 5];
+
+    if (!Array.isArray(arr) || arr.length === 0) {
+        console.log("invalid input");
+    } else {
+        let unique = [];
+        for (let num of arr) {
+            if (num === null) continue;
+            if (!unique.includes(num)) {
+                unique.push(num);
+            }
+        }
+        console.log(unique.length)
+    }
+    */
+
+    //  Solution : 2
+    /*
+    let arr = [1, 2, 2, 3, 4, 4, 5];
+
+    if (!Array.isArray(arr) || arr.length === 0) {
+        console.log("invalid input");
+    } else {
+        let unique = new Set();
+        for (let num of arr) {
+            if (typeof num !== "number" || Number.isNaN(num)) continue;
+            unique.add(num);
+        }
+
+        console.log(unique.size)
+    }
+    */
+
+
+
+
+    // 62. Capitalize First Letter Only
+    // Capitalize only the first letter of a string.
+    // Input:"javascript"
+    // Output:"Javascript"
+
+    //  Solution : 1
+    /*
+    let str = prompt("enter string");
+
+    if (!str || !typeof str === "string" || str.trim().length === 0) {
+        console.log("invalid input ");
+    } else {
+        let arr = str.trim().toLowerCase().split(/\s+/);
+
+        for (let i = 0; i < arr.length; i++) {
+            if (i <= 0) {
+                arr[i] = arr[i][0].toUpperCase() + arr[i].slice(1);
+            } else {
+                arr[i] = arr[i]
+            }
+
+        }
+        str = arr.join(" ");
+        console.log(str);
+    }
+    */
+
+    //  Solution : 2
+    /*
+    let str = prompt("enter string");
+
+    if (typeof str !== "string" || str.trim().length === 0) {
+        console.log("invalid input");
+    } else {
+        str = str.trim();
+        let result = str[0].toUpperCase() + str.slice(1).toLowerCase();
+        console.log(result);
+    }
+    */
+
+
+
+
+    // 63. Find Missing Letters
+    // Return missing alphabet letters.
+    // Input:"abce"
+    // Output:"d"
+
+    //  Solution : 1
+    /*
+    let str = "abce";
+
+    if (typeof str !== "string" || str.trim().length === 0) {
+        console.log("invalid inout");
+    } else {
+        let alphabet = "abcdefghijklmnopqrstuvwxyz";
+        let last = str[str.length - 1];
+        let missing = ""
+        for (let ch of alphabet) {
+            if (ch === last) break;
+            if (!str.includes(ch)) {
+                missing += ch
+            }
+        }
+        console.log(missing);
+    }
+    */
+
+    //  Solution : 2
+    /*
+    let str = "abce";
+
+    if (typeof str !== "string" || str.trim().length === 0) {
+        console.log("invalid inout");
+    } else {
+        str = str.toLowerCase();
+        let set = new Set();
+        for (let ch of str) {
+            if (ch >= "a" && ch <= "z") {
+                set.add(ch);
+            }
+        }
+        console.log(set);
+        let missing = "";
+        for (let i = 0; i < 26; i++) {
+            let ch = String.fromCharCode(97 + i);
+            if (!set.has(ch)) {
+                missing += ch;
+            }
+        }
+        console.log(missing);
+    }
+    */
+
+    //  Solution : 3
+    /*
+    let str = "abce";
+
+    if (typeof str !== "string" || str.trim().length === 0) {
+        console.log("invalid inout");
+    } else {
+        str = str.toLowerCase();
+        let missing = ""
+        for (let i = 0; i < str.length; i++) {
+            let curr = str.charCodeAt(i);
+            let next = str.charCodeAt(i + 1);
+
+            for (let j = curr + 1; j < next; j++) {
+                ch = String.fromCharCode(j);
+                missing += ch;
+            }
+        }
+        console.log(missing);
+    }
+    */
+
+
+
+
+    // 64. Group Numbers by Even/Odd
+    // Group numbers in object.
+    // Input:[1,2,3,4,5]
+    // Output:
+    // {
+    // even: [2,4],
+    // odd: [1,3,5]
+    // }
+
+    //  Solution : 1
+    /*
+    let arr = [1, 2, 3, 4, 5];
+    if (!Array.isArray(arr) || arr.length === 0) {
+        console.log("invalid array");
+    } else {
+        const result = { even: [], odd: [] };
+        for (let num of arr) {
+            if (!Number.isFinite(num)) continue;
+            num % 2 === 0 ? result.even.push(num) : result.odd.push(num);
+
+        }
+        console.log(result);
+    }
+    */
+
+
+
+
+    // 65. Find Longest Substring Without Repeating Characters
+    // Input:"abcabcbb"
+    // Output: 3 (abc)
+
+    //  Solution : 1
+    /*
+    let str = "abcabcbb";
+
+    if (typeof str !== "string" || str.length === 0) {
+        console.log("invalid input");
+    } else {
+        let str1 = "";
+        let arr = [];
+        let arr2 = [];
+        let start = 0;
+        for (let i = start; i < str.length; i++) {
+            if (!arr.includes(str[i])) {
+                arr.push(str[i]);
+
+            } else {
+                str1 = arr.join("");
+                arr = [];
+                arr2.push(str1);
+                start = --i;
+
+            }
+        }
+
+        str = arr2[0];
+        arr2.forEach((e, i) => {
+            let max = arr2[0].length;
+            if (max < arr2[i].length) {
+                str = e;
+            }
+        });
+        console.log(str.length);
+    }
+    */
+
+    //  Solution : 2
+    /*
+    let str = "abcabcbb";
+
+    if (typeof str !== "string" || str.trim().length === 0) {
+        console.log("invalid input");
+    } else {
+        let set = new Set();
+        let left = 0;
+        let maxLength = 0;
+
+        for (let right = 0; right < str.length; right++) {
+            while (set.has(str[right])) {
+                set.delete(str[left]);
+                left++;
+            }
+            set.add(str[right]);
+            maxLength = Math.max(maxLength, right - left + 1);
+        }
+        console.log(maxLength);
+    }
+    */
+
+
+
+    // 66. Count Occurrences of Word in Sentence
+    // Input:"hello world hello"
+    // Output:hello 2
+
+
+    //  Solution : 1
+    /*
+    let str = "hello world hello";
+
+    if (typeof str !== "string" || str.trim().length === 0) {
+        console.log("invalid input");
+    }
+    else {
+        str = str.toLowerCase().replace(/[^\w\s]/g, "").trim()
+
+        let words = str.split(/\s+/);
+
+        let freq = Object.create(null);
+        for (let word of words) {
+            freq[word] = (freq[word] || 0) + 1;
+        }
+
+        let max = 0;
+        let maxWord = "";
+        for (let word in freq) {
+            if (max < freq[word]) {
+                max = freq[word];
+                maxWord = word;
+            }
+
+        }
+        console.log(maxWord, max);
+    }
+    */
+
+
+
+
+    // 67. Find Pair With Maximum Sum
+    // Input:[1,9,3,7,5]
+    // Output:9+7=16
+
+    //  Solution : 1
+    /*
+    let arr = [1, 9, 3, 7, 5];
+    
+    if (!Array.isArray(arr) || arr.length < 2) {
+        console.log("invalid input ");
+    } else {
+        let max1 = -Infinity;
+        let max2 = -Infinity;
+        for (let num of arr) {
+            if (!Number.isFinite(num)) continue;
+
+            if (num > max1) {
+                max2 = max1;
+                max1 = num;
+            } else if (num > max2) {
+                max2 = num;
+            }
+
+        }
+        if (max2 === -Infinity) {
+            comsole.log("No valid input ");
+        } else {
+            console.log(max1, "+", max2, "=", max1 + max2);
+        }
+    }
+    */
+
+
+
+
+    // 68. Reverse Words But Keep Order
+    // Input:"hello world"
+    // Output:"olleh dirow"
+
+    //  Solution : 1
+    /*
+    let str = "hello   world";
+
+    if (typeof str !== "string" || str.trim().length === 0) {
+        console.log("invalid input");
+    }
+    else {
+
+        let words = str.trim().split(/\s+/);
+
+        for (let i = 0; i < words.length; i++) {
+            words[i] = words[i].split("").reverse().join("");
+        }
+        str = words.join(" ");
+        console.log(str);
+    }
+   */
+
+    //  Solution : 2
+    /*
+    let str = "hello   world js";
+
+    if (typeof str !== "string" || str.trim().length === 0) {
+        console.log("invalid input");
+    }
+    else {
+
+        let result = "";
+        let word = "";
+
+        for (let ch of str) {
+
+            if (ch !== " ") {
+                word = ch + word;
+            } else {
+                result += word + ch;
+                word = "";
+            }
+        }
+        result += word
+        console.log(result);
+    }
+    */
+
+
+
+
+    // 69. Find Longest Consecutive Numbers
+    // Input: [100, 4, 200, 1, 3, 2]
+    // Output: 4(1, 2, 3, 4)
+
+    //  Solution : 1
+    /*
+    let arr = [100, 4, 200, 1, 3, 2];
+
+    if (!Array.isArray(arr) || arr.length === 0) {
+        console.log("invalid inpute");
+    } else {
+        arr.sort((a, b) => a - b);
+        let LCN = [];
+
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i] + 1 == arr[i + 1]) {
+                LCN.push(arr[i]);
+            } else {
+                LCN.push(arr[i]);
+                break;
+            }
+        }
+        console.log(LCN);
+    }
+    */
+
+    //  Solution : 2
+    /*
+    let arr = [100, 4, 200, 1, 3, 2];
+
+    if (!Array.isArray(arr) || arr.length === 0) {
+        console.log("invalid inpute");
+    } else {
+
+        let set = new Set(arr);
+        let maxLength = 0;
+
+        for (let num of set) {
+            if (!set.has(num - 1)) {
+                let current = num;
+                let count = 1;
+
+
+                while (set.has(current + 1)) {
+                    current++;
+                    count++;
+                }
+                maxLength = Math.max(maxLength, count);
+            }
+
+
+        }
+        console.log(maxLength);
+    }
+    */
+
+
+
+
+    // 70. Find Majority Element
+    // Element appearing more than n/2 times.
+    // Input: [3,3,4,3,2]
+    // Output: 3
+
+    //  Solution : 1
+    /*
+    let arr = [3, 3, 4, 3, 2];
+
+    if (!Array.isArray(arr) || arr.length === 0) {
+        console.log("invalid input");
+    } else {
+
+        let valid = arr.filter(Number.isFinite);
+        let freq = Object.create(null);
+        let result = null;
+        if (valid.length === 0) {
+            console.log("No Majority  element")
+        } else {
+            for (let num of valid) {
+
+                freq[num] = (freq[num] || 0) + 1;
+            }
+            for (let i in freq) {
+                if (freq[i] > Math.floor(valid.length / 2)) {
+                    result = Number(i);
+                    break;
+                }
+            }
+            console.log(result !== null ? result : "No Majority element");
+        }
+    }
+    */
+
+
+
+
+    // 71. Chunk Array Into Groups
+    // Input:[1,2,3,4,5], size = 2
+    // Output:[[1,2],[3,4],[5]]
+
+    //  Solution : 1
+    /*
+    let arr = [1, 2, 3, 4, 5];
+    let size = 2;
+
+    if (!Array.isArray(arr) || arr.length ===
+        0) {
+        console.log("Invalid Input");
+    } else if (!Number.isFinite(size) || size < 1) {
+        console.log("Invalid Input");
+    }
+    else {
+        let result = [];
+        let subArr = [];
+        for (let num of arr) {
+            if (!Number.isFinite(num)) continue;
+            subArr.push(num);
+
+            if (subArr.length === size) {
+                result.push(subArr);
+                subArr = [];
+            }
+        }
+        if (subArr.length > 0) {
+            result.push(subArr);
+        }
+        console.log(result);
+    }
+    */
+
+
+
+
+    // 72. Remove Falsy Values
+    // Input: [0, "hello", false, "", 5]
+    // Output:["hello", 5]
+
+    //  Solution : 1
+    /*
+    let arr = [0, "hello", false, "", 5];
+    if (!Array.isArray(arr) || arr.length === 0) {
+        console.log("Invalid input");
+        return;
+    }
+
+    let truthyArr = [];
+    for (let val of arr) {
+        if (val) truthyArr.push(val);
+    }
+    console.log(truthyArr);
+    */
+
+    //  Solution : 2
+    /*
+    let arr = [0, "hello", false, "", 5];
+    if (!Array.isArray(arr) || arr.length === 0) {
+        console.log("Invalid input");
+        return;
+    }
+    console.log(arr.filter(Boolean));
+    */
+
+
+
+
+    // 73. Check if String Contains Only Digits
+    // Input:"12345"
+    // Output:true
+
+    //  Solution : 1
+    /*
+    let str = "12345";
+
+    if (typeof str !== "string" || str.trim().length === 0) {
+        console.log("invalid inpute");
+    } else {
+        let isDigits = [...str].every(ch => ch >= '0' && ch <= '9')
+        console.log(isDigits);
+    }
+    */
+
+
+
+
+    // 74. Find Second Smallest Number
+    // Input: [4,1,9,7,2]
+    // Output: 2
+
+    //  Solution : 1
+    /*
+    let arr = [4, 1, 9, 7, 2];
+
+    if (!Array.isArray(arr) || arr.length === 0) {
+        console.log("invalid input");
+    } else {
+        let min = Infinity;
+        let min2 = Infinity;
+
+        for (let num of arr) {
+            if (!Number.isFinite(num)) continue;
+            if (num < min) {
+                min2 = min;
+                min = num;
+            } else if (num < min2 && num > min) {
+                min2 = num;
+            }
+        }
+        console.log(min2 !== Infinity ? min2 : "No second smallest element found");
+    }
+    */
+
+
+
+
+    // 75. Find Product of Array Except Self
+    // Input: [1,2,3,4]
+    // Output:[24,12,8,6]
+
+    //  Solution : 1
+    /*
+    let arr = [1, 2, 3, 4];
+
+    if (!Array.isArray(arr) || arr.length === 0) {
+        console.log("invalid array");
+    } else {
+        let result = [];
+        for (let i = 0; i < arr.length; i++) {
+            let temp = 1;
+            for (let j = 0; j < arr.length; j++) {
+                if (i === j) continue;
+                temp = temp * arr[j];
+            }
+            result.push(temp)
+        }
+        console.log(result);
+    }
+    */
+
+    //  Solution : 2
+    /*
+    let arr = [1, 2, 3, 4];
+
+    if (!Array.isArray(arr) || arr.length === 0) {
+        console.log("invalid array");
+    } else {
+
+        for (let num of arr) {
+            if (!Number.isFinite(num)) {
+                console.log("Invalid array elements");
+                return;
+            }
+        }
+
+        let n = arr.length;
+        let result = new Array(n).fill(1);
+
+        let left = 1;
+        for (let i = 0; i < n; i++) {
+            result[i] *= left;
+            left *= arr[i];
+        }
+
+        let right = 1;
+        for (let j = n - 1; j >= 0; j--) {
+            result[j] *= right;
+            right *= arr[j];
+        }
+        console.log(result);
+    }
+    */
+
 </script>
